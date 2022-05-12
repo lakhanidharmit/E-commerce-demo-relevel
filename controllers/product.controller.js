@@ -58,7 +58,7 @@ exports.delete = (req,res)=>{
 
 exports.findOne = (req,res) => {
     const productId = req.params.id;
-    Product.findByPK(productId).then(response => {
+    Product.findByPk(productId).then(response => {
         res.status(200).send(response);
     }).catch(err =>{
         res.status(500).send({
